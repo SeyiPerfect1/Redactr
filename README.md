@@ -15,5 +15,5 @@ ADVANCED FEATURES
 
 -The app display how many words were scanned, how many characters were scrambled in total, how long it took (in seconds) to complete the scrambling task.
 
--On filling out the form, the app request for the date of birth of the user(optional). This helps in calculating the age of the user. If the user did not provide his/her/their date of birth or if the age of the user is less than 18years, the app scramble all the matched words. If the user 18 years or above 18years of age, the app scrambles the even positioned characters in the matched words e.g Sex is scrambled to s*x, Whore is scrambled to W*o*e etc
+-On filling out the form, the app request for the date of birth of the user(optional). This helps in calculating the age of the user. If the user did not provide his/her/their date of birth or if the age of the user is less than 18years, the app scramble all the matched words. If the user 18 years or above 18years of age, the app scrambles the even positioned characters in the matched words e.g Sex is scrambled to s*x, Whore is scrambled to W*o*e etc.
 
