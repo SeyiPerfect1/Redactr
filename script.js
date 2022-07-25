@@ -1,9 +1,9 @@
 var startTime = performance.now()
-let unscrambledWords = document.getElementById("form-field") //cathes the first input
-let words_to_be_scrambled = document.getElementById("specify-field") //cathes the desired scrambled words
-let wordReplacement = document.getElementById("replacement-field") //cathes the replacement input
-let submission = document.querySelector("button")  //cathes the redactr button
-let dateOfBirth = document.getElementById("age") //cathes the date of birth button
+let unscrambledWords = document.getElementById("form-field") //catches the first input
+let words_to_be_scrambled = document.getElementById("specify-field") //catches the desired scrambled words
+let wordReplacement = document.getElementById("replacement-field") //catches the replacement input
+let submission = document.querySelector("button")  //catches the redactr button
+let dateOfBirth = document.getElementById("age") //catches the date of birth button
 let form = document.querySelector("form") //catches the form
 
 
@@ -13,7 +13,7 @@ wordReplacement.addEventListener("keydown", prevent_space_in_replacement) //prev
 wordReplacement.addEventListener("paste", e=>e.preventDefault()) //prevent pasting words to wordreplacement
 
 
-submission.addEventListener("click", scrambleWords) //redactre click event
+submission.addEventListener("click", scrambleWords) //redactr click event
 
 
 function prevent_space_in_replacement(e){
@@ -47,10 +47,10 @@ function scrambleWords(){
             try{
             wordCount1 += wordCount.length
             } catch(TypeError){
-                let tag = document.createElement("h3")
+                let tag = document.createElement("span")
                 let text = document.createTextNode(`Word(s) provided is/are not in text`)
-                tag.appendChild(text)
-                successMsg.appendChild(tag)
+                tag.prepend(text)
+                successMsg.prepend(tag)
                 displayMsg()
             }
             wordCount2 = wordCount1
@@ -95,11 +95,12 @@ function scrambleWords(){
             }
         }
         unscrambledWords.value = unscrambledWords1
-        let tag = document.createElement("h3")
+        let tag = document.createElement("span")
         let text = document.createTextNode(`${wordCount2} word(s), ${charCount} character(s) scrambled in ${(Math.round(endTime-startTime)/1000).toFixed(4)}sec`)
-        tag.appendChild(text)
-        successMsg.appendChild(tag)
+        tag.prepend(text)
+        successMsg.prepend(tag)
         displayMsg()
+        
     }
 
     else{
@@ -111,10 +112,10 @@ function scrambleWords(){
             try{
                 wordCount1 += wordCount.length
                 } catch(TypeError){
-                    let tag = document.createElement("h3")
+                    let tag = document.createElement("span")
                     let text = document.createTextNode(`Word(s) provided is/are not in text`)
-                    tag.appendChild(text)
-                    successMsg.appendChild(tag)
+                    tag.prepend(text)
+                    successMsg.prepend(tag)
                     displayMsg()
                 }
             wordCount2 = wordCount1
@@ -170,11 +171,13 @@ function scrambleWords(){
             }
         }
         unscrambledWords.value = unscrambledWords1
-        let tag = document.createElement("h3")
+        let tag = document.createElement("span")
+        tag.className = "newcontent"
         let text = document.createTextNode(`${wordCount2} word(s), ${charCount} character(s) scrambled in ${(Math.round(endTime-startTime)/1000).toFixed(4)}sec`)
-        tag.appendChild(text)
-        successMsg.appendChild(tag)
+        tag.prepend(text)
+        successMsg.prepend(tag)
         displayMsg()
+
          
     }
 
@@ -218,5 +221,8 @@ closeButton.addEventListener('click', closeBtn) //close success msg event
 function closeBtn(){
 
     closeButton.parentElement.style.opacity='0';
-    
+    let newContent = document.querySelector("span")
+    newContent.remove()
 }
+
+
