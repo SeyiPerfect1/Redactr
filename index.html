@@ -9,21 +9,40 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="alert" id="alert">
-        <span class="closebtn">&times;</span> 
-    
-    </div>
-    <form action="">
-        <label for="form-field">Enter/Paste the content</label>
-        <input name="form-field" type="text" id="form-field" placeholder="Enter text here...." required>
-        <label for="specify-field">Specify the word(s) to be scrambled</label>
-        <input name="specify-field" type="text" id="specify-field" placeholder="Enter text here...." required>
-        <label for="replacement-field">Specify replacement</label>
-        <input name="specify_field" id="replacement-field" type="text" placeholder="Enter text here....">
-        <label for="age">User's DOB</label>
-        <input name="age" id="age" type="date">
-        <button type="button">Redactr</button>
-        <button type="reset">Reset</button>
-    </form>
+    <main>
+        <div class="alert" id="alert">
+            <span class="closebtn">&times;</span> 
+        
+        </div>
+        <h2>REDACTR...share words safely....</h2>
+        <form action="">
+            <div class="form-container">
+                <div class="form-field">
+                    <label for="form-field"><span>**</span>Enter/Paste the content</label>
+                    <textarea name="form-field" id="form-field" cols="100" rows="100"></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="specify-field"><span>**</span>Specify the word(s) to be scrambled</label>
+                    <input name="specify-field" type="text" id="specify-field" placeholder="Enter text here...." required>
+                </div>
+
+                <div class="form-field">
+                    <label for="replacement-field">Specify replacement</label>
+                    <input name="specify_field" id="replacement-field" type="text" placeholder="Enter text here....">
+                </div>
+
+                <div class="form-field">
+                    <label for="age">User's DOB</label>
+                    <input name="age" id="age" type="date">
+                </div>
+                
+                <div id="redactr-btn">
+                    <button class="redactr-btn" type="button">Redact now</button>
+                </div>
+
+            </div>
+        </form>
+    </main>
 </body>
 </html>
