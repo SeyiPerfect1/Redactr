@@ -24,7 +24,7 @@ main{
 
 h2{
   margin-top: 30px;
-  color: var(--cyan);
+  color: var(--blue);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 20px;
   font-weight: bolder;
@@ -52,7 +52,7 @@ label{
 }
 
 #form-field{
-  height: 100px;
+  height: 120px;
   width: 600px;
   border: none;
   border-radius: 10px;
@@ -85,12 +85,12 @@ input:focus, textarea:focus{
   border: none;
   border-radius: 10px;
   color: var(--white);
-  background-color: var(--blue);
+  background-color: var(--light-blue);
 
 }
 
 .redactr-btn:hover{
-  background-color: var(--light-blue);
+  background-color: var(--cyan);
   transition: 1s;
   cursor: pointer;
 }
@@ -156,14 +156,14 @@ input:focus, textarea:focus{
     }
     
     #form-field{
-      height: 100px;
-      width: 350px;
+      height: 120px;
+      width: 300px;
       border: none;
       border-radius: 10px;
     }
     
     input{
-      width: 350px;
+      width: 300px;
       height: 35px;
       border: none;
       border-radius: 5px;
@@ -179,13 +179,13 @@ input:focus, textarea:focus{
     
     .redactr-btn{
       margin-top: 25px;
-      width: 250px;
+      width: 200px;
       height: 35px;
       font-size: 15px;
       border: none;
       border-radius: 10px;
       color: var(--white);
-      background-color: var(--blue);
+      background-color: var(--light-blue);
     
     }
     
